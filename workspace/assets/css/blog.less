@@ -1,0 +1,227 @@
+.header-content { .date { font-size: 2.4rem } }
+
+.blog-list { padding-top: 20px; padding-bottom: 20px }
+
+.blog-entry { padding: 2px; }
+
+.blog-grid { padding-left: 15px; padding-right: 15px }
+
+.blog-entry, .blog-post {
+
+	.pale-blue-block { background-color: @pale-blue; color: @black; }
+
+	.mint-block { background-color: @mint; color: @black; }
+
+	.rose-block { background-color: @rose; color: @black }
+
+	.grey-block { background-color: @grey20; color: @black; }
+
+	.blog-block {
+		position: relative;
+	}
+
+	.featured-image { 
+		line-height: 0;
+		text-align: center;
+		img { max-width: 100% }
+	}
+
+	.title {
+		padding-left: 15px;
+		padding-right: 15px;
+
+		h4 { 
+			margin-top: 1.5rem; 
+			margin-bottom: 1.5rem; 
+			line-height: 1;
+		}
+		a { 
+			color: @black; 
+			&:focus, &:hover { color: @white }
+			&:focus { outline-color: @white }
+		}
+	}
+
+	.abstract {
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-bottom: 10px;
+
+		font-size: 1.4rem;
+		line-height: 1.1;
+	}
+
+	.date {
+		padding-left: 15px;
+		padding-right: 15px;
+		font-size: 2rem;
+		font-weight: bold;
+		letter-spacing: .3px;
+	}
+
+	.read-more {
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 10px;
+		padding-bottom: 15px;
+
+		position: relative;
+		text-align: right;
+
+		a {
+			line-height: 1;
+			position: relative;
+			text-align: right;
+			padding: 10px 0 2px 0;
+			color: @black;
+
+			svg { margin-bottom: -2px }
+
+			&:focus { outline-color: @grey40 }
+			&:focus, &:hover { color: @white; }
+		}	
+	}
+}
+
+.blog-post { padding-top: 20px; }
+
+.blog-footer { 
+	padding-top: 20px; 
+	padding-bottom: 20px; 
+
+	font-size: 1.8rem;
+	line-height: 1.8;
+
+	.blog-back a {
+		color: @black;
+		padding-bottom: 2px;
+
+		border: none;
+
+		svg { margin-right: 10px; }
+
+		&:focus { outline-color: @grey40 }
+		&:focus, &:hover { color: @white; border: none; }
+	}
+
+	.blog-share {
+		float: right;
+		padding-top: 20px;
+
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+
+		span { padding-right: 10px; }
+		a { 
+			line-height: 0;
+			border: none;
+
+			font-size: 3.5rem;
+			color: @black;
+
+			&:hover, &:focus { color: @white; border: none }
+		}
+	}
+}
+
+.pagination {
+	padding: 0 2px;
+	list-style: none;
+	text-align: center;
+
+	li { display: inline; position: relative; }
+
+	.ellipsis { 
+		padding-left: 15px; 
+		padding-right: 15px; 
+
+		display: none;
+	}
+	.page-container { display: none; }
+	.disabled { display: none }
+
+
+	.pagination-previous, .pagination-next, .page {
+		position: relative;
+
+		text-align: center;
+		padding: 15px 20px;
+		margin-bottom: 4px;
+		display: inline-block;
+		line-height: 1;
+		
+		font-weight: bold;
+		font-size: 1.6rem;
+
+		border-radius: 0px 0px 3px 3px;
+
+		transition: background-color 0.2s;
+
+		background-color: @grey20;
+		box-shadow: 0 4px fade(@grey60, 50%);
+
+		.buttontxt { display: none }
+		svg { margin-bottom: -2px; }
+
+		&:hover, &:focus {
+			top: 2px;
+			box-shadow: 0 2px fade(@grey60, 50%);
+			background-color: #d9d9d9;
+		}
+		&:focus { outline-color: @grey40 }
+	}
+
+	.selected .page {
+		top: 2px;
+		box-shadow: 0 2px fade(@grey60, 50%);
+		background-color: lighten(@slate, 20%);
+		color: @white;
+
+		.current-span { padding-right: 5px; }
+		.current-total { }
+	}
+
+	.pagination-previous { float: left }
+	.pagination-next { float: right }
+
+}
+
+@media (min-width: @sm){
+	.blog-footer {
+
+		font-size: 2.0rem;
+		line-height: 2.0;
+
+		.blog-share { padding-top: 0; }
+	}
+}
+
+@media (min-width: @md){
+	.header-content { .date { font-size: 3.0rem } }
+
+	.pagination {
+
+		.ellipsis { display: inline; }
+		.page-container { display: inline; }
+
+		.pagination-previous, .pagination-next{
+			font-size: 2.0rem;
+			.buttontxt { display: inline; padding-right: 10px }
+		}
+
+		.selected .page {
+			top: 2px;
+			box-shadow: 0 2px fade(@grey60, 50%);
+			background-color: lighten(@slate, 20%);
+			color: @white;
+
+			.current-span { display: none }
+			.current-total { display: none }
+		}
+
+	}
+}

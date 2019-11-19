@@ -1,0 +1,61 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+html, body{margin:0; padding:0; height:100%;}
+
+body{
+	background-color:#3d422e;color:#ffb500;
+	font-family:"Segoe UI", sans-serif;
+	
+/*
+	background-image:url(yellowsub.png);
+	background-repeat:no-repeat;
+	background-position: right bottom;
+*/
+}
+img{max-width:100%;}
+
+#container{
+	min-height:100%;
+	position:relative;
+}
+#body{margin:0 auto;padding:20px;padding-bottom:140px;text-align:center;}
+.textlogo{margin: 25px 0;}
+.email{padding:25px 0;font-size:1em;}
+.email a{color:#FBB32B;text-decoration:none;}
+#sub{
+	text-align: right;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 140px;
+    padding: 0 10px;
+}
+#sub img{width: 25%;}
+
+#tel p{font-size:2em;}
+#temp p{font-size:1.4em;}
+
+@media (min-width:550px){
+	.email{font-size:1.5em;}
+}
+@media (min-width:768px){
+	#body{max-width:90%;}
+	.email{font-size:2em;}
+}
+@media (min-width:992px){
+	#body{max-width:80%;}
+	.textlogo{max-width: 55%;margin: 25px auto;}
+	#sub img{width:16%;}
+}
+@media (min-width:1200px){
+	.textlogo{max-width: 44%;margin: 25px auto;}
+	#sub img{width:10%;}
+}
